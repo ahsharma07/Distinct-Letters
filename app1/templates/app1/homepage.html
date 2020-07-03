@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<h1> Enter text in lowercase Characters</h1>
+<form method="post">{% csrf_token %}
+    <div>
+    <textarea name="text" style="width: 373px;
+    height: 185px;"></textarea>
+        </div>
+    <button type="submit">Submit</button>
+</form>
+{% if answer %}
+<h1>Distinct letters are {{answer}}</h1>
+<h1>Distinct letters count are {{answer|length}}</h1>
+{% endif %}
+</body>
+</html>
